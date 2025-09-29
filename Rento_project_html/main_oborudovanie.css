@@ -1,0 +1,97 @@
+.jcarousel_{
+	position: relative;
+}
+.jcarousel{
+	margin: 0px auto 0;
+	width: 1040px;
+	
+	overflow: hidden;
+}
+@media screen and (max-width:1200px){.jcarousel{width: 832px;}}
+@media screen and (max-width:992px){.jcarousel{width: 624px;}}
+@media screen and (max-width:784px){.jcarousel{width: 416px;}}
+@media screen and (max-width:576px){.jcarousel{width: 208px;}}
+
+.jcarousel ul {
+	width: 20000em;
+	position: relative;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.jcarousel li {
+	float: left;
+	width: 190px;
+	height: 230px;
+	margin: 0 9px;
+  text-align: center;
+  line-height: 200px;
+}
+
+/** Carousel Controls **/
+.jcarousel_control_prev,
+.jcarousel_control_next{
+	position: absolute;
+	top: 85px;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	box-shadow: 2px 2px 2px rgb(0 0 0 / 15%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	text-decoration: none;
+}
+.jcarousel_control_prev img,
+.jcarousel_control_next img{
+	width: 9px;
+  height: 16px;
+}
+.jcarousel_control_prev {
+    left: 0px;
+}
+.jcarousel_control_next {
+    right: 0px;
+}
+.jcarousel_control_prev:hover span,
+.jcarousel_control_next:hover span {
+    display: block;
+}
+.jcarousel_control_prev.inactive,
+.jcarousel_control_next.inactive {
+    opacity: .5;
+    cursor: default;
+}
+
+/** Carousel Pagination **/
+.jcarousel .jcarousel_pagination{
+	position: absolute;
+	bottom: 0;
+	margin: 0;
+	width: 200px;
+  left: calc(50% - 100px);
+  text-align: center;
+}
+.jcarousel .jcarousel_pagination a{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	line-height: 50px;
+	text-align: center;
+	color: #fff;
+	font-size: 2px;
+	text-decoration: none;
+	border: 3px solid black;
+	border-radius: 50%;
+	background: #fff;
+	margin: 0 5px;
+}
+.jcarousel .jcarousel_pagination .active,
+.jcarousel .jcarousel_pagination a:hover
+{
+	/*background-color: rgba(255,255,255,.2);*/
+	background-color: #000;
+}
